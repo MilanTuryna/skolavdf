@@ -1,0 +1,1 @@
+- linearf.py = vypočítání rovnice ax+b = 0
