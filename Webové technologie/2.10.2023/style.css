@@ -1,0 +1,12 @@
+body {
+    background:#eee;
+}
+
+table {
+    table-layout: fixed;
+}
+
+td {
+    padding: 0.5em;
+    border: 1px solid;
+}
