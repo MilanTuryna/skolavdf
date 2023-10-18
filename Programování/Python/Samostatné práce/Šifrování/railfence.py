@@ -1,5 +1,5 @@
-koleje = 2
 from math import ceil
+import unicodedata
 
 class Cypher():
     def __init__(self, amount):
@@ -8,7 +8,7 @@ class Cypher():
         self.encoded = False
 
     # 1,2,3,4 kolejnice 5 kolejnic 
-    def __declension(item_types, number):
+    def __declension(self, item_types, number):
         if(number < 1): 
             return item_types[0]
         elif(number < 5):
@@ -21,15 +21,16 @@ class Cypher():
             rails.append([""]*length)
         return rails
 
-    def __transcript(self, open_text):
-        return open_text
+    def __transcript(self, text):
+         text = unicodedata.normalize('NFKD', text)
+         return "".join([c for c in text if not unicodedata.combining(c)]) 
                     
     def encrypt(self, open_text, setter = True):
         self.encoded = True
         self.__open_text = self.__transcript(open_text)
-        length = len(open_text)
+        length = len(self.__open_text)
         rails =  self.__build_rails(length)
-        chars = [*open_text]
+        chars = [*self.__open_text]
         i = 0
         krok = 1
         for count, letter in enumerate(chars):
@@ -47,6 +48,7 @@ class Cypher():
         return result
     
     def decrypt(self, cipher_text):
+        self.encoded = True
         self.__cypher_text = self.__transcript(cipher_text)
         rails = self.__build_rails(len(self.__cypher_text))
         letters = [*self.__cypher_text]
@@ -61,7 +63,7 @@ class Cypher():
             i += krok
         fronta = 0
         result = [""]*10
-        for line_count, line in enumerate(rails):
+        for line in rails:
             for position, character in enumerate(line):
                 if character == "*":
                     result[position] = letters[fronta]
@@ -77,20 +79,21 @@ class Cypher():
     
     def __str__(self):
         if(self.encoded):
-            amount_of_rails = self.amount + " " + self.__declension(["kolejnic", "kolejnice", "kolejnic"], self.amount)
-            return f"Váš zašifrovaný text pro {self.__declension()} ({amount_of_rails})"
+            amount_of_rails = str(self.amount) + " " + self.__declension(["kolejnic", "kolejnice", "kolejnic"], self.amount)
+            return f"Váš zašifrovaný text ({amount_of_rails}): {self.__cypher_text}"
         else:
             return "Žádný text nebyl ještě zakódován!"
     
 
 # zkouška
-textinput = "TESTYRESTY"
+textinput = "TESTYRESTYž"
 print(f"Vstup: {textinput}")
 
 test = Cypher(3)
 test.encrypt(textinput)
 cypher_text = test.get_cypher_text()
 print(f"Zašifrovaný text: {cypher_text}")
+print(test)
 
 test.decrypt("TYTETRSYSE")
 print(f"Dešifrovaný text: {test.get_open_text()}")

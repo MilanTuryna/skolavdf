@@ -1,0 +1,89 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    max-width: 100%;
+}
+
+header nav {
+    background: #687a0a;
+    height: 100%;
+}
+
+header nav h1 {
+    color: #9ba680;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 3em;
+    text-align: center;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background: #f5ff80;
+}
+
+@media only screen and (max-width: 890px) {
+    body {
+        display:block
+    }
+
+    header nav {
+        min-width: 100%;
+    }
+}
+
+/* fruits */
+
+.fruit-container {
+    background: #f5ff80;
+    display: grid;
+    min-height: 100vh;
+
+    --grid-item--max-width: calc((100% / 3));
+
+    grid-template-columns: repeat(auto-fill, minmax(max(300px, var(--grid-item--max-width)), 1fr))
+}
+
+.fruit-container div {
+    min-width: 33.3%;
+    padding: 60px 40px 40px;
+}
+
+.fruit-container div h2 {
+    text-align: center;
+    padding-bottom: 60px;
+    color: rgba(255,255,255,0.5)
+}
+
+.apple {
+    background: #812021;
+}
+
+.banana {
+    background: #f2cf00;
+}
+
+.blueberry {
+    background: #363981;
+}
+
+.melon {
+    background: #d91813;
+}
+
+.orange {
+    background: #d96b01;
+}
+
+.pour {
+    background: #786700;
+}

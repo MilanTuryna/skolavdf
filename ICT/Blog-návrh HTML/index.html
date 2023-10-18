@@ -1,10 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Fitnerd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600&family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+
 </head>
-<body>
-$END$
+<body class="bg-[#efefef]">
+<header class="bg-[#1079CF] px-8">
+    <div class="flex justify-between items-stretch bg-[rgba(255,255,255,0.10)] px-4 text-white h-full">
+        <div class="w-[22%] flex-grow py-2">
+            <img src="img/wide-logo.png" style="width: 15em" alt="logo"/>
+        </div>
+        <nav>
+            <ul class="flex justify-between h-full">
+                <li>
+                    <a href="" class="flex items-center nav-link px-5 h-full">Archiv článků</a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center nav-link px-5 h-full">O webu</a>
+                </li>
+                <li>
+                    <a href="" class="flex items-center nav-link px-5 h-full">Diskuze</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="w-[22%] flex gap-x-4 flex-grow justify-end">
+                <label class="flex self-center">
+                    <input type="search" placeholder="Vyhledávat" class="border w-full rounded-[10px] shadow-sm">
+                </label>
+                <a href="" class="h-full flex items-center underline nav-link px-2">
+                    Stát se redaktorem
+                </a>
+        </div>
+    </div>
+</header>
+<div class="flex bg-white w-100 mx-8 flex-grow flex-items-grow flex-items-center">
+    <div>
+        <a href="" class="block h-full w-full py-2 border-b-[7px] border-b-[#7605AB]">Vzpírání</a>
+    </div>
+    <div>
+        <a href="" class="block h-full w-full py-2 border-b-[7px] border-b-[#E6AF2E]">Powerlifting</a>
+    </div>
+    <div class="block h-full py-2 border-b-[7px] border-b-[#F05365]">
+        <a href="">Kulturistika</a>
+    </div>
+    <div class="py-2 border-b-[7px] border-b-[#4464AD]">Strongman</div>
+    <div class="py-2 border-b-[7px] border-b-[#7D4600]">Armwrestling</div>
+    <div class="py-2  bg-[#fff8f8] border">Technika cviků</div>
+    <div class="py-2  bg-[#fff8f8] border">Studie</div>
+    <div class="py-2  bg-[#fff8f8] border">Periodizace</div>
+</div>
+<main class="mx-12 mt-6">
+    <div class="grid grid-cols-12">
+        <div class="col-span-9">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="w-full border rounded bg-[url('https://q2r9j4d4.rocketcdn.me/wp-content/uploads/2023/10/Featured-Images-for-Articles.png')]">
+                    <article class="w-full bg-[rgba(2,50,64,0.7)] rounded text-white px-6 py-4">
+                        <h2 class="font-semibold text-2xl  open-sans">Why Do Sumo Deadlifts Seem Easier Than Conventional Deadlifts?</h2>
+                        <p class="uppercase text-xs mb-2">MILAN TURYNA | 11. ŘÍJEN 2023</p>
+                        <p class="dm-sans">Since sumo deadlifts disproportionately reward people who already have great leverages for deadlifting, it shouldn’t be too surprising that a disproportionate amount of the best deadlifters are sumo deadlifters.</p>
+                    </article>
+                </div>
+                <div class="w-full border rounded bg-[url('https://q2r9j4d4.rocketcdn.me/wp-content/uploads/2023/10/Featured-Images-for-Articles.png')]">
+                    <article class="w-full bg-[rgba(0,0,0,0.50)] rounded open-sans text-white px-6 py-4">
+                        <h2 class="font-semibold text-2xl">Why Do Sumo Deadlifts Seem Easier Than Conventional Deadlifts?</h2>
+                        <span>date time</span>
+                        <p>Since sumo deadlifts disproportionately reward people who already have great leverages for deadlifting, it shouldn’t be too surprising that a disproportionate amount of the best deadlifters are sumo deadlifters.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-3">
+            ddd
+        </div>
+    </div>
+    <div class="grid grid-cols-12">
+        <div class="col-span-7">
+            <article>
+                <img src="">
+                <h2>Title</h2>
+                <span>date time</span>
+                <p></p>
+            </article>
+        </div>
+        <div class="col-span-5">
+            <!-- sidebar informations-->
+        </div>
+    </div>
+</main>
 </body>
 </html>

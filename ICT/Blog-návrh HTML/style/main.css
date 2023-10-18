@@ -1,0 +1,25 @@
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.dm-sans {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.flex-items-grow > div {
+    flex-grow: 1;
+}
+
+.flex-items-center {
+    text-align: center;
+}
+
+/* navigations links*/
+
+.nav-link {
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.1);
+}
