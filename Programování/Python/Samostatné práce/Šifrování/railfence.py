@@ -95,5 +95,5 @@ cypher_text = test.get_cypher_text()
 print(f"Zašifrovaný text: {cypher_text}")
 print(test)
 
-test.decrypt("TYTETRSYSE")
+test.decrypt("NCADASU OSHLEEVTEICMS NOSIDI")
 print(f"Dešifrovaný text: {test.get_open_text()}")

@@ -1,0 +1,53 @@
+.trojuhelnik {
+    width: 0;
+    background-color: transparent;
+    border-left: 200px solid #eee;
+    border-right: 200px solid #eeeeee;
+    border-top: 100px solid #d91813;
+    transition: 0.3s;
+}
+
+.otevreny-trojuhelnik {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-left: 200px solid #eee;
+    border-right: 200px solid #fff;
+    border-bottom: 0px solid #d96b01;
+}
+
+.obalka {
+    min-height: 400px;
+    display: inline-block;
+    background-color: #eee;
+}
+
+.obalka:hover .otevreny-trojuhelnik {
+    animation-name: odkryti;
+    animation-delay: 4s;
+    animation-duration: 4s;
+}
+
+.obalka:hover .trojuhelnik {
+    animation-name: skryti;
+    animation-duration: 4s;
+}
+
+@keyframes odkryti {
+    from {
+        border-bottom: 0 solid #d96b01;
+    }
+
+    to {
+        border-bottom: 100px solid #d96b01;
+    }
+}
+
+@keyframes skryti {
+    from {
+        border-top: 100px solid #d91813;
+    }
+    to {
+        border-top: 0 solid #d91813;
+    }
+}
